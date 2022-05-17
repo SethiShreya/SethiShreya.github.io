@@ -1,21 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <title>Workbench</title>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <style>
-        model-viewer {
-          width: 800px; height: 600px; margin: auto; 
-        }
-      </style>
-    <title>AR App</title>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="demo-styles.css">
+    
+    <!-- The following libraries and polyfills are recommended to maximize browser support -->
+    <!-- NOTE: you must adjust the paths as appropriate for your project -->
+    
+    <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+
+  </head> 
 <body>
-    <div>     
-      <model-viewer src="Workbench.glb" alt="A 3D model of an astronaut" ar auto-rotate camera-controls></model-viewer>
-    </div>
-      
+  <div id="card">
+    <!-- All you need to put beautiful,interactive 3D content on your site: -->
+    <model-viewer src="Workbench.glb"
+                  alt="A 3D model of an Workbench"
+                  shadow-intensity="1"
+                  camera-controls
+                  auto-rotate ar>
+    </model-viewer>
+    <section class="attribution">
+      <span>
+        <h1>Workbench</h1>
+        <span>By <a href="https://www.linkedin.com/in/shreya-sethi-3a6164228/" target="_blank">Shreya Sethi</a></span>
+      </span>
+    </section>
+    
+  </div>
+  <script type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
 </body>
 </html>
